@@ -291,11 +291,11 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "// Area livre da cama: 60cm p/ frente\no = CoordinateSystem.ByOrigin(p);\nor = CoordinateSystem.Translate(o,0,d/2+0.3,0);\n\nal = Rectangle.ByWidthLength(or,w,0.6);\naf = Rectangle.ByWidthLength(o,w,d);\nh;\nVector.ZAxis();",
+      "Code": "// Area livre da cama: 60cm p/ frente\no = CoordinateSystem.ByOrigin(p);\nor = CoordinateSystem.Translate(o,0,-d/2-0.3,0);\n\nal = Rectangle.ByWidthLength(or,w,0.6);\naf = Rectangle.ByWidthLength(o,w,d);\nh;\nVector.ZAxis();",
       "Id": "322ec684ad2e45239c98a5d621b8d487",
       "Inputs": [
         {
-          "Id": "bfd4dd28a13e465898afded848af4e37",
+          "Id": "4057fd22076a4493a3eedcb695a0a593",
           "Name": "p",
           "Description": "p",
           "UsingDefaultValue": false,
@@ -304,7 +304,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "dc3688d4b427402ea676c0e1b715e501",
+          "Id": "8bf9ac46c77a49eea2c5c0fab8975c52",
           "Name": "d",
           "Description": "d",
           "UsingDefaultValue": false,
@@ -313,7 +313,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "5aa932b8f1174b818e78bc01ab91515e",
+          "Id": "13e67374640f4e36b816a5e906505c47",
           "Name": "w",
           "Description": "w",
           "UsingDefaultValue": false,
@@ -322,7 +322,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "79a0c1aa5ba1438199a57f714d50772c",
+          "Id": "c9adcf4ae3344516b2e37318bf638863",
           "Name": "h",
           "Description": "h",
           "UsingDefaultValue": false,
@@ -333,7 +333,7 @@
       ],
       "Outputs": [
         {
-          "Id": "d328b625c75a42bfa59c371760a2fcdf",
+          "Id": "c38d58a33f2c417aabb30a7ad0a1f89c",
           "Name": "",
           "Description": "o",
           "UsingDefaultValue": false,
@@ -342,7 +342,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "4bc79092ee6d4d6fbfb1ca8483ca3ff8",
+          "Id": "31043a556fce4a809af2cdc2befca78b",
           "Name": "",
           "Description": "or",
           "UsingDefaultValue": false,
@@ -351,7 +351,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "961edb10b7464276a298e426d976d394",
+          "Id": "4478fc12e8c94ceaae197138a09905a1",
           "Name": "",
           "Description": "al",
           "UsingDefaultValue": false,
@@ -360,7 +360,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d7d665cf91f042cf978e976f8eb2c8e0",
+          "Id": "6cfc11e4583f4cef9519a24d95cf49ac",
           "Name": "",
           "Description": "af",
           "UsingDefaultValue": false,
@@ -369,7 +369,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "5f95cb0db5854611b2680cde1130d213",
+          "Id": "8fd27926cf584e0c8a7d726f841462d3",
           "Name": "",
           "Description": "Value of expression at line 7",
           "UsingDefaultValue": false,
@@ -378,7 +378,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "91b126ee205943f8bebe418859f64122",
+          "Id": "76474e8836f34428951444c00774e588",
           "Name": "",
           "Description": "Value of expression at line 8",
           "UsingDefaultValue": false,
@@ -497,46 +497,6 @@
       "Description": "Return the Point at specified U and V parameters.\n\nSurface.PointAtParameter (u: double = 0, v: double = 0): Point"
     },
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
-      "FunctionSignature": "b7d53942-f5f1-46b5-b32c-8da905c94724",
-      "FunctionType": "Graph",
-      "NodeType": "FunctionNode",
-      "Id": "cd4f6357275a43b7bccf02a3dd1d7459",
-      "Inputs": [
-        {
-          "Id": "2912e2c2b1524902bccc738f9fecbd54",
-          "Name": "element",
-          "Description": "var",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "fda51cc6c5cd4e47972eed8f3152e508",
-          "Name": "degree",
-          "Description": "The angle around Z-axis\n\nvar",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "b6fcb2f1116c45f08ad50e0a73e71265",
-          "Name": "Element",
-          "Description": "return value",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "Set the angle of the element around its local Z-axis.\r\n(Same as the Rotate command in Revit)"
-    },
-    {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
       "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.BoundingBox",
@@ -634,46 +594,6 @@
       ],
       "Replication": "Auto",
       "Description": "Create a Surface by filling in the interior of a closed boundary defined by input Curves.\n\nSurface.ByPatch (closedCurve: Curve): Surface"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
-      "FunctionSignature": "d0e002bc-b698-422e-9027-0908d87ed18c",
-      "FunctionType": "Graph",
-      "NodeType": "FunctionNode",
-      "Id": "9310431ce82a4e92a34ac4b4b7bfccd6",
-      "Inputs": [
-        {
-          "Id": "4de980bc6c244943ae00038d12833f52",
-          "Name": "element",
-          "Description": "var",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "60f69fa103ad4271a1024b6e7561fa42",
-          "Name": "location",
-          "Description": "Point\n\nvar",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "8c256d3c90714f46a8f161b1b66c31f0",
-          "Name": "Element",
-          "Description": "return value",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "Modify the location of the given element.\r\n(Same as the Move command in Revit.)\r\nWorks for point/ line/ sketch based elements, view-specific elements, groups and link instances."
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -800,32 +720,6 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
       "NodeType": "InputNode",
       "Parameter": {
-        "Name": "element",
-        "TypeName": "var",
-        "TypeRank": 0,
-        "DefaultValue": null,
-        "Description": ""
-      },
-      "Id": "8d44d887917e4b0aa31ba9aac4333c0e",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "7b13598f87944156892032e60270afc6",
-          "Name": "",
-          "Description": "Symbol",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
-      "NodeType": "InputNode",
-      "Parameter": {
         "Name": "curve",
         "TypeName": "Autodesk.DesignScript.Geometry.Curve",
         "TypeRank": 0,
@@ -878,7 +772,7 @@
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
       "NodeType": "OutputNode",
       "ElementResolver": null,
-      "Symbol": "Element",
+      "Symbol": "Location",
       "Id": "7ab605da8c01451ab930a3e0fd6395de",
       "Inputs": [
         {
@@ -1079,6 +973,27 @@
       ],
       "Replication": "Disabled",
       "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Rotation",
+      "Id": "20d5106ad89c4e6c9d7940fff1bcd9ea",
+      "Inputs": [
+        {
+          "Id": "33ea50661b804838bec0e53f8b06339e",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
     }
   ],
   "Connectors": [
@@ -1100,7 +1015,7 @@
     {
       "Start": "929fcb1df2a94e0eb3d341fad353c5e7",
       "End": "f298167fc11b4f34858eddb6bfc5396f",
-      "Id": "5dc27f1177fa4617a27e1658ddf16257"
+      "Id": "7462a219e1e44a4188593cb830bfc11c"
     },
     {
       "Start": "dd16e132f3bf44b68519d57b4b9cc2fc",
@@ -1113,14 +1028,14 @@
       "Id": "7b5258ba74154292be6623034c2cd929"
     },
     {
-      "Start": "5cc39dcdec83490ca5eee315adb42a6c",
-      "End": "4347bd01ada44067bb3910aecbc921db",
-      "Id": "f26f3f075b004e9fa4b892ac388546e5"
+      "Start": "14071bc5457c48bc8c871137724fa737",
+      "End": "dc5cd6f16cb74fa5a52445f9bc199c9d",
+      "Id": "c9d5f9c683e54fd798bf4020a1c2b52a"
     },
     {
-      "Start": "5cc39dcdec83490ca5eee315adb42a6c",
-      "End": "dc5cd6f16cb74fa5a52445f9bc199c9d",
-      "Id": "27fea01c9672454fa2527e6a7fcb9a7b"
+      "Start": "14071bc5457c48bc8c871137724fa737",
+      "End": "4347bd01ada44067bb3910aecbc921db",
+      "Id": "b4b725591b5d46c394606cecc40eabe7"
     },
     {
       "Start": "5cc39dcdec83490ca5eee315adb42a6c",
@@ -1128,39 +1043,34 @@
       "Id": "bab163c9da084d92b14861517ba0a176"
     },
     {
-      "Start": "961edb10b7464276a298e426d976d394",
+      "Start": "4478fc12e8c94ceaae197138a09905a1",
       "End": "89090432b9f04cb08b21e919c9499073",
-      "Id": "ffc82c8c79fe45daba633f9b6d5cbbd2"
+      "Id": "58be7f52b2df4492ab640edbac748daa"
     },
     {
-      "Start": "d7d665cf91f042cf978e976f8eb2c8e0",
+      "Start": "6cfc11e4583f4cef9519a24d95cf49ac",
       "End": "50a05577fbbe4eb9bbd782ebbfbceb7e",
-      "Id": "b8518fa3a8394f04ab7d6394a28e6ebe"
+      "Id": "a269e60fd90c41608256b33b8c9706ad"
     },
     {
-      "Start": "5f95cb0db5854611b2680cde1130d213",
+      "Start": "8fd27926cf584e0c8a7d726f841462d3",
       "End": "3a9df9a0d1d14e9abeac1da66a1fc67b",
-      "Id": "3d660ae3c1de4bedb509097e54194777"
+      "Id": "ff6f69ec00334783ad3d9d791ad90f08"
     },
     {
-      "Start": "5f95cb0db5854611b2680cde1130d213",
+      "Start": "8fd27926cf584e0c8a7d726f841462d3",
       "End": "d459fa518b164c62a8cf283c913d6bc0",
-      "Id": "73c0a82f635f4e8a9fe3a64f90a52a06"
+      "Id": "c7be0ff666a04ca191bb3649779838fb"
     },
     {
-      "Start": "91b126ee205943f8bebe418859f64122",
+      "Start": "76474e8836f34428951444c00774e588",
       "End": "893952a36fc1457e859076370e436f2f",
-      "Id": "bc28dc34e76548cfbea5e5b5274376e5"
+      "Id": "940df286ae4b4908b7ac68457b3515f0"
     },
     {
-      "Start": "91b126ee205943f8bebe418859f64122",
+      "Start": "76474e8836f34428951444c00774e588",
       "End": "ed44bef9be144c9087152423f31c8711",
-      "Id": "74ca72bcc7b249b49977763d203c9ba0"
-    },
-    {
-      "Start": "55878beced374bae9133e733953facc6",
-      "End": "5aa932b8f1174b818e78bc01ab91515e",
-      "Id": "6dcd485d07f2477ab771fc9f2d7e0c89"
+      "Id": "f17741d65de4439eace070ccbeb388be"
     },
     {
       "Start": "55878beced374bae9133e733953facc6",
@@ -1168,9 +1078,9 @@
       "Id": "14d19a4de9894932ad420dc55c693a38"
     },
     {
-      "Start": "830f64ad422f42e28475636daa5c405d",
-      "End": "dc3688d4b427402ea676c0e1b715e501",
-      "Id": "182daae630294da4aafc9dc9c2121083"
+      "Start": "55878beced374bae9133e733953facc6",
+      "End": "13e67374640f4e36b816a5e906505c47",
+      "Id": "e4c7b00e1e174b4fbd9e779200eb8e6b"
     },
     {
       "Start": "830f64ad422f42e28475636daa5c405d",
@@ -1178,14 +1088,14 @@
       "Id": "cb5ae27375c54df79528294a17893dd5"
     },
     {
-      "Start": "af9262090af343c294eb4d0db7bc20e8",
-      "End": "79a0c1aa5ba1438199a57f714d50772c",
-      "Id": "89e3766feb6a4e1c848959e84bdcba52"
+      "Start": "830f64ad422f42e28475636daa5c405d",
+      "End": "8bf9ac46c77a49eea2c5c0fab8975c52",
+      "Id": "9ac29099042546e3be8691aea7236224"
     },
     {
-      "Start": "f41d6f0d8748455e962ca2fd7d03acf5",
-      "End": "bfd4dd28a13e465898afded848af4e37",
-      "Id": "a6799308cfb74128a499c5ab8c37fec4"
+      "Start": "af9262090af343c294eb4d0db7bc20e8",
+      "End": "c9adcf4ae3344516b2e37318bf638863",
+      "Id": "52be496dce4a42e5b693f627af1667aa"
     },
     {
       "Start": "f41d6f0d8748455e962ca2fd7d03acf5",
@@ -1194,18 +1104,18 @@
     },
     {
       "Start": "f41d6f0d8748455e962ca2fd7d03acf5",
-      "End": "60f69fa103ad4271a1024b6e7561fa42",
-      "Id": "3e0857e1a4184ffa901247b71b9eea94"
-    },
-    {
-      "Start": "f41d6f0d8748455e962ca2fd7d03acf5",
       "End": "b9995f3da56844cb92a1f11fe772e260",
       "Id": "dfbd02f41c1b46609b4bcafa6f448e7c"
     },
     {
-      "Start": "b6fcb2f1116c45f08ad50e0a73e71265",
-      "End": "4de980bc6c244943ae00038d12833f52",
-      "Id": "c15810a9dac341739a7ce422c902bb09"
+      "Start": "f41d6f0d8748455e962ca2fd7d03acf5",
+      "End": "4057fd22076a4493a3eedcb695a0a593",
+      "Id": "23a1fa67992b48259fbf9cb998008599"
+    },
+    {
+      "Start": "f41d6f0d8748455e962ca2fd7d03acf5",
+      "End": "2c41ab39a7364fe3bc963ba0de8a29bf",
+      "Id": "116106eb7b884a3c8c8c643a974ac114"
     },
     {
       "Start": "15ee2524ec3e40b185c827715fb3639d",
@@ -1223,11 +1133,6 @@
       "Id": "5bb0326c51f3455cb29a7a5a954c1766"
     },
     {
-      "Start": "8c256d3c90714f46a8f161b1b66c31f0",
-      "End": "2c41ab39a7364fe3bc963ba0de8a29bf",
-      "Id": "58b2441875e94945ad14b5b17fb01ede"
-    },
-    {
       "Start": "01d5a7477f77488ab96c833e37d35589",
       "End": "c2c613ce58c043e689fd5c97aa5af1eb",
       "Id": "c225f9811fc149ff9283a753c6874287"
@@ -1239,13 +1144,13 @@
     },
     {
       "Start": "abafa5b3411247b686ba627ab04ba743",
-      "End": "fda51cc6c5cd4e47972eed8f3152e508",
-      "Id": "309cbd8330fb4e2cb10b8fcafcc5d1fc"
+      "End": "a0249d2a6bbc491e8a1ebc452af40e0a",
+      "Id": "822e5fa515784259880f6961a156ce3f"
     },
     {
       "Start": "abafa5b3411247b686ba627ab04ba743",
-      "End": "a0249d2a6bbc491e8a1ebc452af40e0a",
-      "Id": "822e5fa515784259880f6961a156ce3f"
+      "End": "33ea50661b804838bec0e53f8b06339e",
+      "Id": "e66e50d8da284656b34d674e8d239171"
     },
     {
       "Start": "6be8a6d35cf24c35b36c090ab1d9d4b8",
@@ -1256,11 +1161,6 @@
       "Start": "f2281b1b8f3d43b4930500de343b8138",
       "End": "a0e911d3ef9a4647824c7bb6d59800c6",
       "Id": "3e05283434d14804b47e5a6251b231d5"
-    },
-    {
-      "Start": "7b13598f87944156892032e60270afc6",
-      "End": "2912e2c2b1524902bccc738f9fecbd54",
-      "Id": "14b473e793e941e29795fc40d6190c6f"
     },
     {
       "Start": "690e49e19fc54b819a4338b335e4fb9f",
@@ -1275,7 +1175,7 @@
     {
       "Start": "f2f279f95ad445ff8260f42c521e2fe7",
       "End": "3e9688fe940449cf96045f087a9254f3",
-      "Id": "a9f89bed741646c69c6feccfc3e50d0b"
+      "Id": "5c322f5c312948fe8a5c36c4523997ad"
     },
     {
       "Start": "b30047adcb6149eabeaab6893bc90423",
@@ -1289,9 +1189,7 @@
     }
   ],
   "Dependencies": [
-    "119fed50-cf6e-435e-9841-59ee18cb7d50",
-    "b7d53942-f5f1-46b5-b32c-8da905c94724",
-    "d0e002bc-b698-422e-9027-0908d87ed18c"
+    "119fed50-cf6e-435e-9841-59ee18cb7d50"
   ],
   "NodeLibraryDependencies": [
     {
@@ -1300,15 +1198,6 @@
       "ReferenceType": "Package",
       "Nodes": [
         "069ee627e0a44de988ff4c088a8078f9"
-      ]
-    },
-    {
-      "Name": "Genius Loci",
-      "Version": "2021.2.18",
-      "ReferenceType": "Package",
-      "Nodes": [
-        "cd4f6357275a43b7bccf02a3dd1d7459",
-        "9310431ce82a4e92a34ac4b4b7bfccd6"
       ]
     }
   ],
@@ -1324,15 +1213,15 @@
     },
     "Camera": {
       "Name": "Background Preview",
-      "EyeX": -15.098731353773928,
-      "EyeY": 4.8415515551398691,
-      "EyeZ": 4.1858350111242677,
-      "LookX": 11.045884158682497,
-      "LookY": -6.1344203871380092,
-      "LookZ": -7.8239992709879509,
-      "UpX": 0.16966225162729828,
-      "UpY": 0.97814760073381124,
-      "UpZ": -0.12017483743053065
+      "EyeX": -6.9393792087234187,
+      "EyeY": 2.8699652354210516,
+      "EyeZ": 5.419858468684275,
+      "LookX": 0.25073278099690643,
+      "LookY": -3.5019327292204863,
+      "LookZ": -8.5012601205273359,
+      "UpX": 0.0051192841311974054,
+      "UpY": 0.98480775301225132,
+      "UpZ": -0.17357270101323841
     },
     "NodeViews": [
       {
@@ -1417,16 +1306,6 @@
       },
       {
         "ShowGeometry": false,
-        "Name": "Element SetRotation",
-        "Id": "cd4f6357275a43b7bccf02a3dd1d7459",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": true,
-        "X": 2157.9900945704326,
-        "Y": 597.3291287480381
-      },
-      {
-        "ShowGeometry": false,
         "Name": "Geometry.BoundingBox",
         "Id": "3249233a7e05469b97c4454bede69087",
         "IsSetAsInput": false,
@@ -1454,16 +1333,6 @@
         "Excluded": false,
         "X": 1019.506769621283,
         "Y": 717.41804670097008
-      },
-      {
-        "ShowGeometry": false,
-        "Name": "Element SetLocation",
-        "Id": "9310431ce82a4e92a34ac4b4b7bfccd6",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 2455.7851699658054,
-        "Y": 734.61099657493173
       },
       {
         "ShowGeometry": true,
@@ -1508,16 +1377,6 @@
       {
         "ShowGeometry": true,
         "Name": "Input",
-        "Id": "8d44d887917e4b0aa31ba9aac4333c0e",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 8.16952820588881,
-        "Y": 344.93240513238823
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "9c200b3523f14945821f8913de617e62",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -1536,7 +1395,7 @@
         "Y": 600.0
       },
       {
-        "ShowGeometry": true,
+        "ShowGeometry": false,
         "Name": "Output",
         "Id": "7ab605da8c01451ab930a3e0fd6395de",
         "IsSetAsInput": false,
@@ -1552,18 +1411,18 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2937.6834716195867,
-        "Y": 302.47737366436996
+        "X": 3088.1287964916119,
+        "Y": 238.455187694521
       },
       {
-        "ShowGeometry": true,
+        "ShowGeometry": false,
         "Name": "Geometry.Rotate",
         "Id": "1b4d334c3b834247ba0f646e1bc74c85",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2502.2486315890833,
-        "Y": 419.8001297935632
+        "X": 2564.8405301843218,
+        "Y": 380.99315266451549
       },
       {
         "ShowGeometry": false,
@@ -1582,8 +1441,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 3001.5890346660203,
-        "Y": 487.06068399698637
+        "X": 3093.1051704678116,
+        "Y": 425.98882914363094
       },
       {
         "ShowGeometry": true,
@@ -1604,11 +1463,21 @@
         "Excluded": false,
         "X": 14.14174960214558,
         "Y": 264.73503897980868
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Output",
+        "Id": "20d5106ad89c4e6c9d7940fff1bcd9ea",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2976.2948349073604,
+        "Y": 847.9867410219623
       }
     ],
     "Annotations": [],
-    "X": -1256.6078088054078,
-    "Y": 96.110552935558133,
-    "Zoom": 0.79882542504955856
+    "X": -3023.13818099155,
+    "Y": -95.77557017095836,
+    "Zoom": 1.2203641850718214
   }
 }
